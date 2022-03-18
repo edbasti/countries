@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --dark-bg-color: hsl(207, 26%, 17%);
+  --article-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 100%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--dark-bg-color);
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid var(--dark-bg-color);
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: var(--dark-bg-color);
+}
+
+.btn:light {
+  background-color: var(--article-color);
+  border: 2px solid var(--article-color);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  baciground-color: var(--dark-bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px;
+  background-color: #2b3743;
+}
+
+.grid article img {
+  border-radius: 5px 5px 0 0;
+}
+
+.grid .details {
+  background-color: #2b3743;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.grid .countries h3 {
+  background-color: #2b3743;
+  padding: 20px;
+}
+
+.grid .details h4 {
+  padding-bottom: 5px;
+}
+
+.grid .details span {
+  font-weight: 300;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0 5px 10px hsla(200, 15%, 8%, 0.1);
+}
+
+.header i {
+  cursor: pointer;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #2b3743;
+}
+
+.filter .form-control {
+  width: 100%;
+}
+
+.filter .form-control input {
+  background-color: #2b3743;
+  outline: none;
+  padding: 12px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.filter .form-control input::placeholder {
+  color: #ffffff;
+}
+
+.filter .region-filter .select {
+  background-color: #2b3743;
+  color: #ffffff;
+  font-family: inherit;
+  padding: 12px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+body.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.header.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.filter.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+#search.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+select.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.details.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.details.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
+.header,
+.form,
+.countries {
+  padding: 10px 50px;
+}
+
+.countries article {
+  transition: background-color 0.4s;
+}
+
+.countries .flag img {
+  border-radius: 5px 5px 0 0;
+}
+
+.countries .details {
+  border-radius: 0 0 5px 5px;
+  background-color: var(--article-color);
+  margin: -10px 0 30px;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.countries .details.light-theme {
+  background-color: var(--light-mode-background);
+}
+
+.countries .details h4 {
+  margin: 10px 0;
+}
+
+.countries .details h4 span {
+  transition: background-color 0.4s;
+}
+
+.country {
+  padding: 50px;
+  background-color: #2b3743;
+}
+
+.btn-light {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.country article .country-details div {
+  margin: 30px 0;
+}
+
+.country article .country-details div h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.country article .country-details div h5 {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.country article .country-details div h5 span {
+  font-weight: 300;
+}
+
+.country article .country-details div h3 {
+  margin: 0 20px;
+  background-color: var(--article-color);
+}
+
+.country article h3 {
+  margin: 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+}
+
+.form input,
+.form select {
+  background-color: var(--article-color);
+  padding: 12px;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+form input::placeholder {
+  color: var(--text-color);
+}
+
+.form input.light-theme,
+.form select.light-theme {
+  background-color: var(--light-mode-input);
+}
+
+.country-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .filter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filter .form-control {
+    width: auto;
+  }
+
+  .filter .form-control input {
+    width: auto;
+    margin: 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .header,
+  .filter,
+  .grid {
+    padding: 20px 100px;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
