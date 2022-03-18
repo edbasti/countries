@@ -4,7 +4,6 @@ import Loader from './Loader';
 
 const Country = () => {
     const [country, setCountry] = useState([]);
-    const [borderLink, setBorderLink] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const { name } = useParams();
     const navigate = useNavigate();
@@ -29,7 +28,7 @@ const Country = () => {
             setIsLoading(false);
         };
         fetchCountry();
-    }, []);
+    }, [name]);
     return (
         <>
             <section className="country">
@@ -48,20 +47,17 @@ const Country = () => {
                     const strLanguages = [];
                     
 
-                    for (const [key, value] of Object.entries(currencies)) {
+                    for (const [key] of Object.entries(currencies)) {
                         strCurrencies.push(currencies[key].name);
                     }
 
-                    for (const [key, value] of Object.entries(name.nativeName)) {
+                    for (const [key] of Object.entries(name.nativeName)) {
                         strNativeNames.push(name.nativeName[key].common);
                     }
 
-                    for (const [key, value] of Object.entries(languages)) {
+                    for (const [key] of Object.entries(languages)) {
                         strLanguages.push(languages[key]);
                     }
-
-                    // currencies and languages are obj arrays
-                    // const strCurrencies = currencies.map(e => e.name).join(","))
 
                     return (
                         <article key={ccn3}>
@@ -106,7 +102,7 @@ const Country = () => {
                             </div>
                             {borders && 
                                 <div>
-                                    <h2>Border Countries:</h2>
+                                    <h4>Border Countries:</h4>
                                     <div className="borders">
                                         {borders.map((border => {
                                             return (

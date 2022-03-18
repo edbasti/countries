@@ -129,6 +129,11 @@ body {
   color: #ffffff;
 }
 
+.grid.light-theme {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+}
+
 .filter .region-filter .select {
   background-color: #2b3743;
   color: #ffffff;
@@ -156,12 +161,12 @@ body.light-theme {
 
 #search.light-theme {
   background-color: var(--light-mode-background);
-  color: var(--light-mode-text);
+  color: var(--light-mode-input);
 }
 
 select.light-theme {
   background-color: var(--light-mode-background);
-  color: var(--light-mode-text);
+  color: var(--light-mode-input);
 }
 
 .details.light-theme {
@@ -198,6 +203,7 @@ select.light-theme {
 
 .countries .details.light-theme {
   background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
 }
 
 .countries .details h4 {
@@ -213,6 +219,10 @@ select.light-theme {
   background-color: #2b3743;
 }
 
+.country.light-theme {
+  background-color: var(--light-mode-input);
+}
+
 .btn-light {
   margin-bottom: 30px;
   display: inline-block;
@@ -220,6 +230,10 @@ select.light-theme {
 
 .country article .country-details div {
   margin: 30px 0;
+}
+
+.country-details {
+  margin-bottom: 20px;
 }
 
 .country article .country-details div h2 {
@@ -244,6 +258,18 @@ select.light-theme {
 
 .country article h3 {
   margin: 0 20px;
+}
+
+.country article .borders {
+  display: flex;
+}
+
+.country article .borders ul {
+  margin: 10px;
+  background-color: var(--article-color);
+  padding: 3px 20px;
+  border-radius: 3px;
+  box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.5);
 }
 
 .form {
@@ -271,6 +297,7 @@ form input::placeholder {
 .form input.light-theme,
 .form select.light-theme {
   background-color: var(--light-mode-input);
+  color: var(--light-mode-input);
 }
 
 .country-link {

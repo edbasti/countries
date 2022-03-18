@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Header = () => {
     const toggleTheme = () => {
-        console.log('toggl');
         const moon = document.querySelector('.fa-moon');
         const header = document.querySelector('.header');
         const input = document.querySelector('#search');
         const select = document.querySelector('select');
         const filter = document.querySelector('.filter');
+        const country = document.querySelector('.country');
+        const grid = document.querySelector('.grid');
         const details = document.querySelectorAll('.details');
 
         moon.addEventListener('click', () => {
@@ -16,6 +17,8 @@ const Header = () => {
             input.classList.toggle('light-theme');
             select.classList.toggle('light-theme');
             filter.classList.toggle('light-theme');
+            country.classList.toggle('light-theme');
+            grid.classList.toggle('light-theme');
 
             details.forEach((detail) => {
                 detail.classList.toggle('light-theme');
@@ -31,7 +34,7 @@ const Header = () => {
                     <h1>Where in the world?</h1>
                 </div>
                 <div>
-                    <i className="fas fa-moon" onClick={() => { toggleTheme() }}></i>
+                    <i className="fas fa-moon" onClick={() => { toggleTheme() }}></i> Dark Mode
                 </div>
             </header>
         </>
