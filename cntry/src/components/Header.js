@@ -11,18 +11,16 @@ const Header = () => {
         const grid = document.querySelector('.grid');
         const details = document.querySelectorAll('.details');
 
-        moon.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-            header.classList.toggle('light-theme');
-            input.classList.toggle('light-theme');
-            select.classList.toggle('light-theme');
-            filter.classList.toggle('light-theme');
-            country.classList.toggle('light-theme');
-            grid.classList.toggle('light-theme');
+        document.body.classList.toggle('light-theme');
+        header.classList.toggle('light-theme');
+        input.classList.toggle('light-theme');
+        select.classList.toggle('light-theme');
+        filter.classList.toggle('light-theme');
+        country.classList.toggle('light-theme');
+        grid.classList.toggle('light-theme');
 
-            details.forEach((detail) => {
-                detail.classList.toggle('light-theme');
-            });
+        details.forEach((detail) => {
+            detail.classList.toggle('light-theme');
         });
     };
     
@@ -34,7 +32,7 @@ const Header = () => {
                     <h1>Where in the world?</h1>
                 </div>
                 <div>
-                    <i className="fas fa-moon" onClick={() => { toggleTheme() }}></i> Dark Mode
+                    <i className="fas fa-moon" onClick={toggleTheme}></i> Dark Mode
                 </div>
             </header>
         </>
